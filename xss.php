@@ -1,3 +1,4 @@
 <?php
 $name = $_GET["name"];
-echo "Welcome".$name;
+$safename = htmlspecialchars($name)
+echo "Welcome".$safename;

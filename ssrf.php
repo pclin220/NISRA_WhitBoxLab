@@ -1,3 +1,7 @@
 <?php
+$whitelist = array["lttstore.com"]
 $url = $_GET["url"];
-$resp = file_get_contents($url); // Noncompliant
+if in_array($whitelist, $url)
+{
+    $resp = file_get_contents($url); // Noncompliant
+}
